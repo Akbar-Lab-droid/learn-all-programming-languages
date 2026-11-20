@@ -1,0 +1,19 @@
+/* style.css - CSS example */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f4f8;
+  color: #1a202c;
+  padding: 40px;
+}
+
+h1 { color: #2563eb; }
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
