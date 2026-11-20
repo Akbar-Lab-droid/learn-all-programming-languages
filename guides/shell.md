@@ -92,7 +92,55 @@ echo "Backup complete: $TARGET"
 2. A script that renames all `.jpeg` files to `.jpg` in a folder.
 3. A server monitor: check disk space, warn if over 80%.
 
-## 12. Next Steps
+## 12. Arguments & Environment Variables
+```bash
+#!/bin/bash
+echo "Script name: $0"
+echo "First argument: $1"
+echo "All arguments: $@"
+echo "Number of arguments: $#"
+echo "Home directory: $HOME"
+echo "Current user: $USER"
+```
+
+## 13. Text Processing with grep, sed & awk
+```bash
+grep "error" app.log              # find lines with "error"
+grep -c "error" app.log           # count them
+awk '{print $1}' data.txt         # print the first column
+sed 's/old/new/g' file.txt        # replace text
+sort names.txt | uniq              # sort and remove duplicates
+wc -l file.txt                     # count lines
+```
+
+## 14. Cron Jobs (Scheduling)
+```bash
+# Edit your schedule:
+crontab -e
+# Examples:
+# 0 8 * * * /home/user/backup.sh    # every day at 08:00
+# */15 * * * * /home/user/check.sh  # every 15 minutes
+```
+
+## 15. Mini-Project: System Monitor Script
+A script that checks disk usage, memory usage, and the top 5 processes by CPU, then appends a dated report to `monitor.log`. Add it to cron so it runs every hour.
+
+## 16. More Exercises & Interview Questions
+**Exercises:**
+4. A script that backs up a folder and keeps only the last 7 backups.
+5. A script that watches a log file and alerts you on errors.
+6. A script that installs a list of packages from a file.
+7. A script that renames photos by their date.
+8. A script that checks if a website is up and logs the result.
+
+**Interview questions:**
+- What is the difference between `>` and `>>`?
+- What does `2>&1` mean?
+- What is the difference between `$*` and `$@`?
+- How do you make a script executable?
+- What is a cron job?
+
+## 17. Next Steps
 - Interactive course: https://linuxjourney.com
 - Tutorial: https://www.shellscript.sh
 - Code examples in this repo: [`examples/shell/`](../examples/shell/)

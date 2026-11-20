@@ -101,7 +101,52 @@ fn divide(a: f64, b: f64) -> Result<f64, String> {
 2. A simple web server with `std::net`.
 3. A small game (guess the number) with proper error handling.
 
-## 13. Next Steps
+## 13. String Manipulation
+```rust
+let text = "  Hello, World!  ";
+println!("{}", text.trim());
+println!("{}", text.to_lowercase());
+println!("{}", text.replace("World", "Rust"));
+println!("{}", "a,b,c".split(',').collect::<Vec<_>>().join("-"));
+```
+
+## 14. File Handling
+```rust
+use std::fs;
+fs::write("notes.txt", "Hello, file!\n").unwrap();
+let content = fs::read_to_string("notes.txt").unwrap();
+println!("{}", content);
+```
+
+## 15. Error Handling
+```rust
+use std::fs;
+match fs::read_to_string("missing.txt") {
+    Ok(content) => println!("{}", content),
+    Err(e) => println!("Could not read file: {}", e),
+}
+// The ? operator propagates errors from functions that return Result.
+```
+
+## 16. Mini-Project: Word Frequency Counter
+Read a text file, count how often each word appears with a `HashMap`, and print the top 5 words. Handle the missing-file case with a friendly error message.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A CLI that greps a pattern in a file (mini grep).
+5. A program that sorts numbers from a file.
+6. A simple HTTP server with `std::net`.
+7. A to-do list stored in a file.
+8. A guessing game that reads input from the terminal.
+
+**Interview questions:**
+- What is ownership? What is borrowing?
+- What is the difference between String and &str?
+- What is a lifetime?
+- How does Rust handle errors? (Result, Option, ?)
+- What is a trait?
+
+## 18. Next Steps
 - The Rust Book (free): https://doc.rust-lang.org/book/
 - Exercises: https://github.com/rust-lang/rustlings
 - Code examples in this repo: [`examples/rust/`](../examples/rust/)

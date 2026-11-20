@@ -107,7 +107,56 @@ class MyApp extends StatelessWidget {
 2. A weather app using an HTTP package.
 3. A chat app UI with a message list.
 
-## 13. Next Steps
+## 13. String Manipulation
+```dart
+var text = '  Hello, World!  ';
+print(text.trim());
+print(text.toLowerCase());
+print(text.replaceAll('World', 'Dart'));
+print('a,b,c'.split(','));
+print('Dart'.startsWith('Da'));
+```
+
+## 14. File Handling
+```dart
+import 'dart:io';
+void main() async {
+  var file = File('notes.txt');
+  await file.writeAsString('Hello, file!\n');
+  print(await file.readAsString());
+}
+```
+
+## 15. Error Handling
+```dart
+try {
+  var n = int.parse('abc');
+} catch (e) {
+  print('Not a number: $e');
+} finally {
+  print('This always runs.');
+}
+```
+
+## 16. Mini-Project: Notes App
+A Flutter list of notes with add and delete. Store notes in a list of objects, and persist them with shared_preferences so they survive app restarts.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A tip calculator app.
+5. A weather app with the http package.
+6. A flashcard app.
+7. A stopwatch app.
+8. A to-do app with local storage.
+
+**Interview questions:**
+- What is null safety?
+- What is the difference between `final` and `const`?
+- What is a widget? Stateless vs Stateful?
+- What is a Future?
+- What is the difference between a List and a Map?
+
+## 18. Next Steps
 - Codelabs: https://docs.flutter.dev/codelabs
 - Language tour: https://dart.dev/language
 - Code examples in this repo: [`examples/dart/`](../examples/dart/)

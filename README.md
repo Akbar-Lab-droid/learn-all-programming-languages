@@ -5,7 +5,7 @@
 
 **One repo to learn every programming language — from zero to job-ready.**
 
-Stop wondering which language to learn first. This repo collects **complete learning paths (full courses)** for 18 programming languages: what each language is for, how hard it is, where to learn it for free, what to build, and where it leads career-wise. Plus **real, runnable code examples** for every language.
+Stop wondering which language to learn first. This repo collects **complete learning paths (full courses)** for 18 programming languages: what each language is for, how hard it is, where to learn it for free, what to build, and where it leads career-wise. Plus **172 real, runnable code examples** and a full mini-course for every language.
 
 > Perfect for: university students of any major, complete beginners, and anyone switching languages or adding a new one.
 
@@ -51,7 +51,7 @@ Stop wondering which language to learn first. This repo collects **complete lear
 4. **Build a project at every stage** — code you don't practice disappears. Every language has a list of practice projects.
 5. **Only then add a second language** — after you can build one real project with the first. Your second language will be much easier: 80% of the concepts are the same, only the syntax changes.
 
-Every language comes with a **complete mini-course** in the [`guides/`](guides/) folder and real code examples in the [`examples/`](examples/) folder — `hello` plus a practical program (calculator / FizzBuzz / analysis) — with comments in English.
+Every language comes with a **complete mini-course** in the [`guides/`](guides/) folder (15+ sections: syntax, strings, files, errors, a mini-project, exercises, interview questions) and **172 real code examples** in the [`examples/`](examples/) folder — 10 real programs per language, with comments in English.
 
 ## Which Language First? (Roadmap)
 
@@ -119,7 +119,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** data analyst, AI engineer, backend developer, data scientist.
 
-**Code examples:** [`examples/python/`](examples/python/) — `hello.py` + `calculator.py`
+**Code examples:** [`examples/python/`](examples/python/) — 10 real programs
 **Complete guide:** [`guides/python.md`](guides/python.md)
 
 ### JavaScript
@@ -141,7 +141,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** frontend developer, fullstack developer, Node.js developer.
 
-**Code examples:** [`examples/javascript/`](examples/javascript/) — `hello.js` + `fizzbuzz.js`
+**Code examples:** [`examples/javascript/`](examples/javascript/) — 10 real programs
 **Complete guide:** [`guides/javascript.md`](guides/javascript.md)
 
 ### TypeScript
@@ -162,7 +162,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** frontend/fullstack developer at large companies.
 
-**Code examples:** [`examples/typescript/`](examples/typescript/) — `hello.ts` + `calculator.ts`
+**Code examples:** [`examples/typescript/`](examples/typescript/) — 10 real programs
 **Complete guide:** [`guides/typescript.md`](guides/typescript.md)
 
 ### HTML & CSS
@@ -184,7 +184,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** frontend developer, web designer, UI developer.
 
-**Code examples:** [`examples/html-css/`](examples/html-css/) — `hello.html` + `style.css`
+**Code examples:** [`examples/html-css/`](examples/html-css/) — 6 real programs
 **Complete guide:** [`guides/html-css.md`](guides/html-css.md)
 
 ### SQL
@@ -206,7 +206,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** data analyst, backend developer, database administrator.
 
-**Code examples:** [`examples/sql/`](examples/sql/) — `hello.sql` + `analysis.sql`
+**Code examples:** [`examples/sql/`](examples/sql/) — 8 real programs
 **Complete guide:** [`guides/sql.md`](guides/sql.md)
 
 ### Java
@@ -228,7 +228,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** backend engineer, Android developer, enterprise software engineer.
 
-**Code examples:** [`examples/java/`](examples/java/) — `HelloWorld.java` + `Calculator.java`
+**Code examples:** [`examples/java/`](examples/java/) — 10 real programs
 **Complete guide:** [`guides/java.md`](guides/java.md)
 
 ### C
@@ -250,7 +250,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** embedded engineer, systems programmer, IoT developer.
 
-**Code examples:** [`examples/c/`](examples/c/) — `hello.c` + `calculator.c`
+**Code examples:** [`examples/c/`](examples/c/) — 10 real programs
 **Complete guide:** [`guides/c.md`](guides/c.md)
 
 ### C++
@@ -272,7 +272,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** game developer, systems engineer, competitive programmer, HFT engineer.
 
-**Code examples:** [`examples/cpp/`](examples/cpp/) — `hello.cpp` + `fizzbuzz.cpp`
+**Code examples:** [`examples/cpp/`](examples/cpp/) — 10 real programs
 **Complete guide:** [`guides/cpp.md`](guides/cpp.md)
 
 ### C#
@@ -293,7 +293,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** game developer (Unity), .NET backend developer, software engineer.
 
-**Code examples:** [`examples/csharp/`](examples/csharp/) — `Hello.cs` + `Calculator.cs`
+**Code examples:** [`examples/csharp/`](examples/csharp/) — 10 real programs
 **Complete guide:** [`guides/csharp.md`](guides/csharp.md)
 
 ### Go
@@ -315,7 +315,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** backend engineer, cloud engineer, DevOps engineer.
 
-**Code examples:** [`examples/go/`](examples/go/) — `hello.go` + `fizzbuzz.go`
+**Code examples:** [`examples/go/`](examples/go/) — 10 real programs
 **Complete guide:** [`guides/go.md`](guides/go.md)
 
 ### Rust
@@ -337,7 +337,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** systems engineer, blockchain developer, infrastructure engineer.
 
-**Code examples:** [`examples/rust/`](examples/rust/) — `hello.rs` + `fizzbuzz.rs`
+**Code examples:** [`examples/rust/`](examples/rust/) — 10 real programs
 **Complete guide:** [`guides/rust.md`](guides/rust.md)
 
 ### PHP
@@ -359,7 +359,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** web developer, WordPress developer, Laravel developer.
 
-**Code examples:** [`examples/php/`](examples/php/) — `hello.php` + `calculator.php`
+**Code examples:** [`examples/php/`](examples/php/) — 10 real programs
 **Complete guide:** [`guides/php.md`](guides/php.md)
 
 ### Ruby
@@ -381,7 +381,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** web developer (Rails), startup engineer.
 
-**Code examples:** [`examples/ruby/`](examples/ruby/) — `hello.rb` + `fizzbuzz.rb`
+**Code examples:** [`examples/ruby/`](examples/ruby/) — 10 real programs
 **Complete guide:** [`guides/ruby.md`](guides/ruby.md)
 
 ### Swift
@@ -403,7 +403,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** iOS developer.
 
-**Code examples:** [`examples/swift/`](examples/swift/) — `hello.swift` + `fizzbuzz.swift`
+**Code examples:** [`examples/swift/`](examples/swift/) — 10 real programs
 **Complete guide:** [`guides/swift.md`](guides/swift.md)
 
 ### Kotlin
@@ -424,7 +424,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** Android developer, backend developer.
 
-**Code examples:** [`examples/kotlin/`](examples/kotlin/) — `Hello.kt` + `FizzBuzz.kt`
+**Code examples:** [`examples/kotlin/`](examples/kotlin/) — 10 real programs
 **Complete guide:** [`guides/kotlin.md`](guides/kotlin.md)
 
 ### Dart & Flutter
@@ -445,7 +445,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** Flutter developer, mobile developer.
 
-**Code examples:** [`examples/dart/`](examples/dart/) — `hello.dart` + `fizzbuzz.dart`
+**Code examples:** [`examples/dart/`](examples/dart/) — 10 real programs
 **Complete guide:** [`guides/dart.md`](guides/dart.md)
 
 ### R
@@ -467,7 +467,7 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** data analyst, statistician, researcher, biostatistician.
 
-**Code examples:** [`examples/r/`](examples/r/) — `hello.R` + `analysis.R`
+**Code examples:** [`examples/r/`](examples/r/) — 10 real programs
 **Complete guide:** [`guides/r.md`](guides/r.md)
 
 ### Shell / Bash
@@ -488,13 +488,13 @@ Each language covers: what it's for, difficulty, learning path, free courses, pr
 
 **Careers:** DevOps engineer, system administrator, SRE.
 
-**Code examples:** [`examples/shell/`](examples/shell/) — `hello.sh` + `backup.sh`
+**Code examples:** [`examples/shell/`](examples/shell/) — 8 real programs
 **Complete guide:** [`guides/shell.md`](guides/shell.md)
 
 
 ## Complete Guides
 
-Every language has a full mini-course in [`guides/`](guides/) — real lessons, not just links: syntax, variables, operators, conditionals, loops, functions, data structures, OOP, common mistakes, and practice exercises.
+Every language has a full mini-course in [`guides/`](guides/) — real lessons, not just links: syntax, variables, operators, conditionals, loops, functions, data structures, OOP, string manipulation, file handling, error handling, a mini-project, common mistakes, practice exercises, and interview questions.
 
 | Language | Guide |
 | --- | --- |

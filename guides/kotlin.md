@@ -89,7 +89,54 @@ println(s)  // Student(name=Akbar, major=Informatics)
 2. A weather app using Retrofit to call an API.
 3. A to-do list with Room database.
 
-## 13. Next Steps
+## 13. String Manipulation
+```kotlin
+val text = "  Hello, World!  "
+println(text.trim())
+println(text.lowercase())
+println(text.replace("World", "Kotlin"))
+println("a,b,c".split(","))
+println("Kotlin".startsWith("Kot"))
+```
+
+## 14. File Handling
+```kotlin
+import java.io.File
+File("notes.txt").writeText("Hello, file!\n")
+println(File("notes.txt").readText())
+File("notes.txt").forEachLine { println(it) }
+```
+
+## 15. Error Handling
+```kotlin
+try {
+    val n = "abc".toInt()
+} catch (e: NumberFormatException) {
+    println("Not a number: ${e.message}")
+} finally {
+    println("This always runs.")
+}
+```
+
+## 16. Mini-Project: Notes App
+A Jetpack Compose list of notes with add and delete. Store notes in a list of data classes, and persist them in a Room database so they survive app restarts.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A tip calculator app.
+5. A weather app with Retrofit.
+6. A flashcard app.
+7. A stopwatch app.
+8. A to-do app with Room database.
+
+**Interview questions:**
+- What is null safety? What is the Elvis operator?
+- What is the difference between `val` and `var`?
+- What is a data class?
+- What are coroutines?
+- What is the difference between a list and a mutable list?
+
+## 18. Next Steps
 - Official docs: https://kotlinlang.org/docs/home.html
 - Android Basics: https://developer.android.com/courses/android-basics-compose/course
 - Code examples in this repo: [`examples/kotlin/`](../examples/kotlin/)

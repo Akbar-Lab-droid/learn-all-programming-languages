@@ -90,7 +90,53 @@ puts s.introduce
 2. A to-do app with a hash of tasks.
 3. A REST API with Sinatra or Rails.
 
-## 12. Next Steps
+## 12. String Manipulation
+```ruby
+text = "  Hello, World!  "
+puts text.strip
+puts text.downcase
+puts text.gsub("World", "Ruby")
+puts "a,b,c".split(",").inspect
+puts "hello".upcase
+```
+
+## 13. File Handling
+```ruby
+File.write("notes.txt", "Hello, file!\n")
+puts File.read("notes.txt")
+File.foreach("notes.txt") { |line| puts line }
+```
+
+## 14. Error Handling
+```ruby
+begin
+  n = Integer("abc")
+rescue ArgumentError => e
+  puts "Not a number: #{e.message}"
+ensure
+  puts "This always runs."
+end
+```
+
+## 15. Mini-Project: Contact Book
+A hash of names to phone numbers, with functions to add, search, list, and save/load from a JSON file. Add a text menu so the user can choose actions.
+
+## 16. More Exercises & Interview Questions
+**Exercises:**
+4. A program that counts word frequency in a text file.
+5. A simple Sinatra web app with two routes.
+6. A to-do list that saves to a JSON file.
+7. A script that renames files in a folder.
+8. A number guessing game with input from the terminal.
+
+**Interview questions:**
+- What is a block? What is a Proc?
+- What is the difference between a symbol and a string?
+- What is a mixin? What is a module?
+- How does Ruby handle nil?
+- What is metaprogramming?
+
+## 17. Next Steps
 - Quickstart (official): https://www.ruby-lang.org/en/documentation/quickstart/
 - Full path: https://www.theodinproject.com/paths/full-stack-ruby-on-rails
 - Code examples in this repo: [`examples/ruby/`](../examples/ruby/)

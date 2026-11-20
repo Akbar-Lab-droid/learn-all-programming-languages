@@ -1,0 +1,7 @@
+#!/bin/bash
+# Countdown - Bash
+for i in 3 2 1; do
+  echo "$i..."
+  sleep 1
+done
+echo "Go!"

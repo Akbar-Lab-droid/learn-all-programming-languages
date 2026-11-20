@@ -105,7 +105,62 @@ printf("%s is %d\n", s.name, s.age);
 2. A snake game on a text grid.
 3. A student record system that saves to a file.
 
-## 13. Next Steps
+## 13. String Manipulation
+```c
+#include <string.h>
+char text[] = "Hello, World!";
+printf("Length: %zu\n", strlen(text));
+char copy[50];
+strcpy(copy, text);
+printf("%s\n", copy);
+printf("Compare: %d\n", strcmp("apple", "banana"));  // negative: apple < banana
+char *found = strstr(text, "World");
+printf("Found at position: %ld\n", found - text);
+```
+
+## 14. File Handling
+```c
+// Write
+FILE *f = fopen("notes.txt", "w");
+fprintf(f, "Hello, file!\n");
+fclose(f);
+// Read
+f = fopen("notes.txt", "r");
+char line[100];
+while (fgets(line, sizeof line, f)) {
+    printf("%s", line);
+}
+fclose(f);
+```
+
+## 15. Error Handling
+```c
+#include <errno.h>
+FILE *f = fopen("missing.txt", "r");
+if (f == NULL) {
+    perror("Could not open file");  // "Could not open file: No such file or directory"
+}
+```
+
+## 16. Mini-Project: Contact Book
+An array of `struct Contact` (name, phone), with functions to add a contact, search by name, list all contacts, and save/load the list to a file. Start with a text menu in `main`.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A program that counts words in a text file.
+5. A phone book using structs and file storage.
+6. Bubble sort an array of 10 numbers.
+7. A program that reverses a file line by line.
+8. A tic-tac-toe game on a 3x3 board.
+
+**Interview questions:**
+- What is a pointer? What is the difference between `*p` and `&x`?
+- What is the difference between stack and heap memory?
+- What does `malloc` do? What happens if you forget `free`?
+- What is a segmentation fault?
+- What is the difference between `struct` and `union`?
+
+## 18. Next Steps
 - Free course: CS50 — https://cs50.harvard.edu
 - Interactive tutorial: https://www.learn-c.org
 - Code examples in this repo: [`examples/c/`](../examples/c/)

@@ -106,7 +106,52 @@ time.Sleep(time.Second)  // give it time to run
 2. A URL shortener.
 3. A CLI tool that counts words in a file.
 
-## 13. Next Steps
+## 13. String Manipulation
+```go
+text := "  Hello, World!  "
+fmt.Println(strings.TrimSpace(text))
+fmt.Println(strings.ToLower(text))
+fmt.Println(strings.Replace(text, "World", "Go", 1))
+fmt.Println(strings.Split("a,b,c", ","))
+fmt.Println(strings.Contains(text, "World"))
+```
+
+## 14. File Handling
+```go
+os.WriteFile("notes.txt", []byte("Hello, file!\n"), 0644)
+data, _ := os.ReadFile("notes.txt")
+fmt.Println(string(data))
+```
+
+## 15. Error Handling
+```go
+data, err := os.ReadFile("missing.txt")
+if err != nil {
+    fmt.Println("Could not read file:", err)
+    return
+}
+fmt.Println(string(data))
+```
+
+## 16. Mini-Project: URL Health Checker
+A program that takes a list of URLs, checks each one with an HTTP GET, and prints whether it is up (200) or down — with the response time. Use goroutines to check them all at once.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A web server with two routes (net/http).
+5. A program that counts lines in all .go files in a folder.
+6. A concurrent downloader with goroutines and channels.
+7. A simple key-value store with a map and a CLI.
+8. A JSON API client that prints data from a public API.
+
+**Interview questions:**
+- What is a goroutine? What is a channel?
+- How does Go handle errors?
+- What is the difference between a slice and an array?
+- What is the zero value?
+- How does the Go scheduler work?
+
+## 18. Next Steps
 - Interactive tour: https://go.dev/tour/
 - Book: https://quii.gitbook.io/learn-go-with-tests/
 - Code examples in this repo: [`examples/go/`](../examples/go/)

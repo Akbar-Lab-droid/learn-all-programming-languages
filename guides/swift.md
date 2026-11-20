@@ -102,7 +102,61 @@ struct Student {
 2. A weather app that fetches a public API.
 3. An iOS to-do list with local storage.
 
-## 13. Next Steps
+## 13. String Manipulation
+```swift
+let text = "  Hello, World!  "
+print(text.trimmingCharacters(in: .whitespaces))
+print(text.lowercased())
+print(text.replacingOccurrences(of: "World", with: "Swift"))
+print("a,b,c".split(separator: ","))
+print("Swift".hasPrefix("Sw"))
+```
+
+## 14. File Handling
+```swift
+import Foundation
+let url = URL(fileURLWithPath: "notes.txt")
+try? "Hello, file!".write(to: url, atomically: true, encoding: .utf8)
+if let content = try? String(contentsOf: url) {
+    print(content)
+}
+```
+
+## 15. Error Handling
+```swift
+enum FileError: Error { case notFound }
+func readFile(_ name: String) throws -> String {
+    guard let content = try? String(contentsOfFile: name) else {
+        throw FileError.notFound
+    }
+    return content
+}
+do {
+    print(try readFile("missing.txt"))
+} catch {
+    print("Could not read file: \(error)")
+}
+```
+
+## 16. Mini-Project: Notes App
+A SwiftUI list of notes with add and delete. Store the notes in an array of structs, and persist them with UserDefaults so they survive app restarts.
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. A weather app that fetches a public API with URLSession.
+5. A tip calculator with SwiftUI.
+6. A flashcard app with a deck of cards.
+7. A stopwatch app.
+8. A to-do app with UserDefaults storage.
+
+**Interview questions:**
+- What is an optional? How do you safely unwrap one?
+- What is the difference between a struct and a class?
+- What is ARC?
+- What is the difference between `let` and `var`?
+- What is a closure?
+
+## 18. Next Steps
 - 100 Days of SwiftUI: https://www.hackingwithswift.com/100/swiftui
 - Apple tutorials: https://developer.apple.com/tutorials/app-dev-training
 - Code examples in this repo: [`examples/swift/`](../examples/swift/)

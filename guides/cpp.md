@@ -92,6 +92,54 @@ public:
 2. A simple game with SFML (draw a moving square).
 3. Solve 10 problems on Codeforces/LeetCode in C++.
 
-## 12. Next Steps
+## 12. String Manipulation
+```cpp
+string text = "  Hello, World!  ";
+cout << text.substr(2, 5) << endl;  // "Hello"
+cout << text.find("World") << endl; // position
+text.replace(2, 5, "C++");
+cout << text << endl;
+cout << to_string(42) << endl;
+```
+
+## 13. File Handling
+```cpp
+#include <fstream>
+ofstream out("notes.txt");
+out << "Hello, file!" << endl;
+out.close();
+ifstream in("notes.txt");
+string line;
+while (getline(in, line)) cout << line << endl;
+```
+
+## 14. Error Handling
+```cpp
+try {
+    throw runtime_error("Something went wrong");
+} catch (const exception &e) {
+    cout << "Caught: " << e.what() << endl;
+}
+```
+
+## 15. Mini-Project: Contact Book
+A `vector<Contact>` where `Contact` is a struct with name and phone. Functions to add, search, list, and save/load from a file. Add a text menu in `main`.
+
+## 16. More Exercises & Interview Questions
+**Exercises:**
+4. A program that reads numbers from a file and prints their average.
+5. A stack class using `std::vector`.
+6. A simple text-based RPG: player, enemy, attack, health.
+7. Sort students by score using `std::sort` with a custom comparator.
+8. A phone book with `std::map`.
+
+**Interview questions:**
+- What is the difference between `new` and `malloc`?
+- What is RAII?
+- What is the difference between a pointer and a reference?
+- What is a virtual function?
+- What is the rule of three/five?
+
+## 17. Next Steps
 - Full free tutorial: https://www.learncpp.com
 - Code examples in this repo: [`examples/cpp/`](../examples/cpp/)

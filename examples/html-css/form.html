@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 40px auto; padding: 20px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 16px; background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Register</h1>
+  <form>
+    <label>Name: <input type="text" name="name" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <label>Major:
+      <select name="major">
+        <option>Informatics</option>
+        <option>Economics</option>
+        <option>Law</option>
+      </select>
+    </label>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

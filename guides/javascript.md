@@ -91,7 +91,70 @@ document.querySelector("button").addEventListener("click", () => {
 2. A number guessing game: the computer picks 1–100, the user guesses until correct.
 3. Fetch data from a public API and print the results with `fetch()`.
 
-## 12. Next Steps
+## 12. String Manipulation
+```js
+const text = "  Hello, World!  ";
+console.log(text.trim());
+console.log(text.toLowerCase());
+console.log(text.replace("World", "JS"));
+console.log("hello world".split(" "));
+console.log(["a", "b"].join("-"));
+console.log("JavaScript".startsWith("Java"));
+console.log("JavaScript".includes("Script"));
+```
+
+## 13. File Handling (Node.js)
+```js
+const fs = require("fs");
+// Write
+fs.writeFileSync("notes.txt", "Hello, file!\nSecond line\n");
+// Read
+console.log(fs.readFileSync("notes.txt", "utf8"));
+// Append
+fs.appendFileSync("notes.txt", "Third line\n");
+```
+
+## 14. Error Handling
+```js
+try {
+  const data = JSON.parse("not json");
+} catch (error) {
+  console.log("Invalid JSON:", error.message);
+} finally {
+  console.log("This always runs.");
+}
+```
+
+## 15. Mini-Project: Expense Tracker
+```js
+// Track spending, total it, and filter by category
+const expenses = [
+  { item: "Coffee", amount: 3.5, category: "food" },
+  { item: "Book", amount: 25, category: "learning" },
+  { item: "Bus", amount: 2, category: "transport" },
+];
+const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+console.log("Total spent: $" + total);
+const food = expenses.filter(e => e.category === "food");
+console.log("Food expenses:", food);
+```
+
+## 16. More Exercises & Interview Questions
+**Exercises:**
+4. A shopping cart: add/remove items, compute the total with tax.
+5. A stopwatch using `setInterval`.
+6. Validate an email address with a regex.
+7. A debounce function: delay a call until the user stops typing.
+8. Fetch 5 posts from https://jsonplaceholder.typicode.com/posts and print their titles.
+
+**Interview questions:**
+- What is the difference between `let`, `const`, and `var`?
+- Explain closures with an example.
+- What is the event loop?
+- What is the difference between `==` and `===`?
+- What are promises and async/await?
+
+## 17. Next Steps
 - Full free course: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 - Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 - Code examples in this repo: [`examples/javascript/`](../examples/javascript/)

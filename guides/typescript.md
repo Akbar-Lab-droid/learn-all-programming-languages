@@ -71,6 +71,73 @@ class Student {
 2. Define types for a small shop: Product, Cart, Order.
 3. Write a generic function that reverses any array.
 
-## 10. Next Steps
+## 10. String Manipulation
+```ts
+function shout(text: string): string {
+  return text.toUpperCase() + "!";
+}
+console.log(shout("hello"));  // "HELLO!"
+const parts: string[] = "a,b,c".split(",");
+console.log(parts.join("-"));  // "a-b-c"
+console.log("TypeScript".includes("Script"));  // true
+```
+
+## 11. File Handling (Node.js)
+```ts
+import * as fs from "fs";
+fs.writeFileSync("notes.txt", "Hello, file!\n");
+const content: string = fs.readFileSync("notes.txt", "utf8");
+console.log(content);
+```
+
+## 12. Error Handling
+```ts
+function parseNumber(input: string): number {
+  const n = Number(input);
+  if (isNaN(n)) throw new Error(`"${input}" is not a number`);
+  return n;
+}
+try {
+  console.log(parseNumber("abc"));
+} catch (error) {
+  console.log("Caught:", (error as Error).message);
+}
+```
+
+## 13. Mini-Project: Typed Expense Tracker
+```ts
+interface Expense {
+  item: string;
+  amount: number;
+  category: string;
+}
+const expenses: Expense[] = [
+  { item: "Coffee", amount: 3.5, category: "food" },
+  { item: "Book", amount: 25, category: "learning" },
+];
+function totalByCategory(list: Expense[], category: string): number {
+  return list
+    .filter(e => e.category === category)
+    .reduce((sum, e) => sum + e.amount, 0);
+}
+console.log("Food total: $" + totalByCategory(expenses, "food"));
+```
+
+## 14. More Exercises & Interview Questions
+**Exercises:**
+4. A typed user registry with interfaces.
+5. A generic `Stack<T>` class with push/pop/peek.
+6. Convert the JavaScript expense tracker to TypeScript with strict types.
+7. A function that fetches JSON and validates its shape.
+8. A small CLI with typed command-line arguments.
+
+**Interview questions:**
+- What is the difference between `interface` and `type`?
+- What are generics and when do you use them?
+- What does `strict` mode enable?
+- How do enums differ from union types?
+- What is a declaration file (.d.ts)?
+
+## 15. Next Steps
 - Handbook (official): https://www.typescriptlang.org/docs/handbook/intro.html
 - Code examples in this repo: [`examples/typescript/`](../examples/typescript/)

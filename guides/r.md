@@ -88,7 +88,63 @@ plot(scores, type = "b", main = "Scores", xlab = "Student", ylab = "Score")
 2. Make a Shiny dashboard for your data.
 3. Write an R Markdown report with plots.
 
-## 13. Next Steps
+## 13. String Manipulation
+```r
+text <- "  Hello, World!  "
+trimws(text)
+tolower(text)
+gsub("World", "R", text)
+strsplit("a,b,c", ",")
+nchar("Hello")
+```
+
+## 14. File Handling
+```r
+# Write a CSV
+write.csv(students, "students.csv", row.names = FALSE)
+# Read it back
+data <- read.csv("students.csv")
+print(data)
+# Read a text file line by line
+lines <- readLines("notes.txt")
+```
+
+## 15. Error Handling
+```r
+result <- tryCatch(
+  {
+    as.numeric("abc")  # produces NA with a warning
+  },
+  warning = function(w) {
+    print(paste("Warning:", w$message))
+    NA
+  },
+  error = function(e) {
+    print(paste("Error:", e$message))
+    NA
+  }
+)
+```
+
+## 16. Mini-Project: Survey Analysis
+Load a survey CSV, clean the NA values, compute group means with `aggregate()`, draw a bar plot, and save an R Markdown report. End with one insight sentence: what did the data actually say?
+
+## 17. More Exercises & Interview Questions
+**Exercises:**
+4. Analyze a real dataset: load it, clean NAs, summarize by group.
+5. A Shiny dashboard with a plot and a filter.
+6. A function that reads many CSVs and combines them.
+7. A correlation analysis with a heatmap.
+8. An R Markdown report with plots and tables.
+
+**Interview questions:**
+- What is the difference between a vector and a list?
+- What is a data frame?
+- How do you handle missing values (NA)?
+- What is the difference between `=` and `<-`?
+- What is the tidyverse?
+
+## 18. Next Steps
 - Free book: https://r4ds.had.co.nz
 - Interactive: https://swirlstats.com
 - Code examples in this repo: [`examples/r/`](../examples/r/)
